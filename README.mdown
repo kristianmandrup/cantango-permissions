@@ -1,6 +1,12 @@
-= permissions
+# CanTango Permissions
 
-Description goes here.
+[CanTango](https://github.com/kristianmandrup/cantango) Permissions is an engine that allows
+individual users to be linked to a Permission model which defines their individual Access rules.
+
+CanTango Permissions will include a Rails 3 editor engine similar to [CanTango editor](https://github.com/kristianmandrup/cantango_editor). The current _cantango_editor_ will likely
+be renamed to _permit_store_editor_ (or similar) in the near future.
+
+Feel free to provide any help developing this project or come with suggestions for improvements. Thanks!
 
 == Contributing to permissions
  

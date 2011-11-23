@@ -1,12 +1,22 @@
-$LOAD_PATH.unshift(File.join(File.dirname(__FILE__), '..', 'lib'))
-$LOAD_PATH.unshift(File.dirname(__FILE__))
+require 'require_all'
 require 'rspec'
-require 'permissions'
+require 'cancan/matchers'
+require 'cantango'
+require 'cantango/rspec'
+require 'mocha'
+require 'fixtures/models'
 
-# Requires supporting files with custom matchers and macros, etc,
-# in ./support/ and its subdirectories.
-Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each {|f| require f}
+require 'factory_girl'
+FactoryGirl.find_definitions
 
-RSpec.configure do |config|
-  
+require 'cutter'
+
+# require 'moneta'
+
+#Cutter::Inspection.quiet!
+
+require 'simple_roles'
+
+CanTango.configure do |config|
+  config.permission_engine.config_path File.dirname(__FILE__) + '/fixtures/config'
 end
